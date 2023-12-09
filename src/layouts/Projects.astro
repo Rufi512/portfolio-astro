@@ -1,0 +1,184 @@
+---
+
+import {ProjectsList} from "../components/CardProject";
+
+---
+
+
+<section class="section-projects">
+    <div class="container">
+        <h2>PROJECTS</h2>
+        <ProjectsList client:load/>
+       
+    </div>
+</section>
+
+<style is:inline>
+    .section-projects{
+        padding: 30px 20px;
+        background: #BDD5EF;
+    }
+
+    .section-projects h2{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2em;
+        color:#1B1B1B;
+        margin-top: 0px;
+    }
+
+    .container-cards{
+        display: flex;
+        flex-flow: wrap;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+       
+    .card{
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+        overflow: hidden;
+        border-radius: 20px;
+        background: #021F3B;
+        height: 450px;
+        max-width: 350px;
+    }
+
+    .card .card-header{
+        position: relative;
+        width: 100%;
+        height: 200px;
+    }
+
+    .card-body{
+        padding: 20px 20px;
+        display:flex;
+        flex-direction:column;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .card-body h3{
+        margin: 0;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color:white;
+    }
+
+    .card-body p{
+        color:white;
+        font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 145%; /* 23.2px */
+letter-spacing: 0.32px;
+flex-grow: 2;
+    }
+
+    .card .bg-image{
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 20px 20px 0px 0px;
+         width: 100%;
+        object-fit: cover;
+        height: 200px;
+    }
+
+    .card .links{
+        position: absolute;
+    width: 100px;
+    top: 0;
+    height: 30px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    gap: 8px;
+    color: white;
+    z-index: 3;
+    }
+
+    .card .links a{
+        display: flex;
+    padding: 5px;
+    border-radius: 5px;
+    background: #13181ed9;
+    box-shadow: 1px 1px 6px 0px #29313eab;
+    color: white;
+    fill: white;
+    transition: all 0.3s ease;
+    }
+
+    .card .links a:hover{
+        transform: scale(1.08);
+    }
+
+    .card-header::after{
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px 20px 0px 0px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(7, 23, 38, 0.28) 93.23%);
+    }
+
+    .languages{
+        display: flex;
+        flex-flow: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .languages span{
+        text-transform: uppercase;
+    border-radius: 25px;
+    background: #092847;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 7px 15px;
+    }
+
+    .link{
+        flex-grow: 1;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    text-decoration: none;
+    }
+
+    .link span{
+        display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    width: 45px;
+    height: 46px;
+    color: #DFDFDF;
+    font-size: 2em;
+    background: #17A63F;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    }
+    
+
+    @media(min-width:1024px){
+        .section-projects h2{
+            font-size: 3em;
+        }
+    }
+
+
+</style>

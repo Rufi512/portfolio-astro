@@ -1,0 +1,683 @@
+---
+import Layout from '../layouts/Layout.astro';
+import astrImg from '../assets/images/astronaut.png'
+import { Image } from 'astro:assets';
+import Projects from '../layouts/Projects.astro';
+import points from '../assets/images/points.png'
+import twitterIcon from '../assets/icons/twitter-icon.png'
+import fiverrIcon from '../assets/icons/fiverr-icon.png'
+---
+
+<Layout title="Portfolio Rafael Amaya">
+	<main>
+		<section class="hero">
+			<div id="particles-js"></div>
+			<Image class="point-adr point-adr-left" src={points} alt="point-adr point-adr-left"/>
+			<div class="container-hero">
+				<h1 class="title-hero"><p>HI! 👋 I AM</p> <span>Rafael Amaya</span></h1>
+				<h2 class="position">Web dev developer</h2>
+			</div>
+			<Image class="point-adr point-adr-right" src={points} alt="point-adr point-adr-right"/>
+			<button class="arrow-container" onclick="scrollIntoView({behavior: 'smooth' });">
+				<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+				<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+			</button>
+		</section>
+		<!-- About -->
+		<section class="section-about">
+			<div class="container">
+				<div class="content-about">
+					<h2>About <span>RAFAEL</span></h2>
+					<p>Web developer passionate about both client-side and server-side programming. My favorite language is javascript. However, I'm not satisfied with that, I'm always eager to explore new technologies and stay on top of the latest trends, the passion for web development and improving myself drives me to learn and grow every day!</p>
+					<div class="content-contact">
+						<a href="#"><div class="tooltip" title="Rafajos9@gmail.com" data-tooltip-placement="top" data-tooltip-interactive="true"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+							<g clip-path="url(#clip0_76_16)">
+							  <path d="M5.31521 7.32605C2.4296 7.32605 0.0884399 9.62649 0.0884399 12.4619C0.0884399 14.0776 0.861566 15.5969 2.17915 16.5706L25.8738 34.0326C27.1152 34.942 28.8139 34.942 30.0553 34.0326L53.7499 16.5706C55.0675 15.5969 55.8407 14.0776 55.8407 12.4619C55.8407 9.62649 53.4995 7.32605 50.6139 7.32605H5.31521ZM0.0884399 19.3097V41.5652C0.0884399 45.3422 3.21361 48.413 7.05747 48.413H48.8716C52.7155 48.413 55.8407 45.3422 55.8407 41.5652V19.3097L32.146 36.7717C29.6632 38.6014 26.2658 38.6014 23.7831 36.7717L0.0884399 19.3097Z" fill="white"/>
+							</g>
+							<defs>
+							  <clipPath id="clip0_76_16">
+								<rect width="55.7522" height="54.7826" fill="white" transform="translate(0.0884399 0.478271)"/>
+							  </clipPath>
+							</defs>
+						  </svg></div></a>
+						  <a href="#"><div class="tooltip" title="+584120814697" data-tooltip-placement="top" data-tooltip-interactive="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="46" viewBox="0 0 48 46" fill="none">
+							<g clip-path="url(#clip0_76_11)">
+							  <path d="M15.9451 2.32585C15.2464 0.667467 13.4044 -0.215222 11.6441 0.257328L3.65909 2.39718C2.08024 2.82515 0.9823 4.23389 0.9823 5.83877C0.9823 27.8971 19.1845 45.7827 41.6332 45.7827C43.2665 45.7827 44.7001 44.7038 45.1357 43.1524L47.3134 35.3063C47.7943 33.5766 46.896 31.7666 45.2083 31.0801L36.4974 27.5137C35.0183 26.9074 33.3034 27.3265 32.2962 28.548L28.6303 32.9436C22.2423 29.9745 17.0702 24.8924 14.0486 18.6155L18.5221 15.0223C19.7652 14.0237 20.1916 12.3475 19.5746 10.8942L15.9451 2.33477V2.32585Z" fill="white"/>
+							</g>
+							<defs>
+							  <clipPath id="clip0_76_11">
+								<rect width="46.4602" height="45.6522" fill="white" transform="translate(0.9823 0.130493)"/>
+							  </clipPath>
+							</defs>
+						  </svg></div></a>
+						<a href="#" class="tooltip"><div class="tooltip" title="Rafael Amaya" data-tooltip-placement="top" data-tooltip-interactive="true"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+							<g clip-path="url(#clip0_77_22)">
+							  <path d="M12.7096 48.4132H1.15101V16.4103H12.7096V48.4132ZM6.9241 12.0448C3.22803 12.0448 0.230103 9.41269 0.230103 6.23488C0.230103 4.70845 0.935361 3.24455 2.19073 2.1652C3.4461 1.08586 5.14874 0.479492 6.9241 0.479492C8.69946 0.479492 10.4021 1.08586 11.6575 2.1652C12.9128 3.24455 13.6181 4.70845 13.6181 6.23488C13.6181 9.41269 10.6189 12.0448 6.9241 12.0448ZM55.9699 48.4132H44.4361V32.8344C44.4361 29.1216 44.349 24.3602 38.4266 24.3602C32.417 24.3602 31.4961 28.394 31.4961 32.5669V48.4132H19.95V16.4103H31.0357V20.7758H31.1975C32.7406 18.2614 36.5101 15.6078 42.1339 15.6078C53.8319 15.6078 55.9823 22.231 55.9823 30.8335V48.4132H55.9699Z" fill="white"/>
+							</g>
+							<defs>
+							  <clipPath id="clip0_77_22">
+								<rect width="55.7522" height="54.7826" fill="white" transform="translate(0.230103 0.478271)"/>
+							  </clipPath>
+							</defs>
+						  </svg></div></a>
+						  <a href="#"> <div class="tooltip" title="@Rufi512" data-tooltip-placement="top" data-tooltip-interactive="true"> <svg xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61" fill="none">
+							<path d="M57.6898 12.2124L49.501 50.1591C48.8832 52.8373 47.272 53.5037 44.9824 52.2423L32.5055 43.2077L26.4852 48.8975C25.8192 49.5521 25.2618 50.0997 23.9778 50.0997L24.8741 37.6133L47.9989 17.0807C49.0043 16.2 47.7809 15.7118 46.4362 16.5927L17.8483 34.2804L5.54084 30.4954C2.86374 29.674 2.81537 27.8647 6.098 26.6031L54.2374 8.37972C56.4661 7.55848 58.4165 8.86761 57.6898 12.2124Z" fill="white"/>
+						  </svg></div></a>
+						<a href="#" class="tooltip"><div class="tooltip"  class="tooltip" title="@Rufi512" data-tooltip-placement="top" data-tooltip-interactive="true"> <Image src={twitterIcon} alt="twitter-icon"/></div></a>
+						<a href="#" class="tooltip"><div class="tooltip"  class="tooltip" title="@Rufi512" data-tooltip-placement="top" data-tooltip-interactive="true"> <Image src={fiverrIcon} style="filter: saturate(0) brightness(2);" alt="fiverr-icon"/></div></a>
+						<a href="#" class="tooltip"><div class="tooltip"  class="tooltip" title="Discord" data-tooltip-placement="top" data-tooltip-interactive="true"> <svg xmlns="http://www.w3.org/2000/svg" width="66" height="50" viewBox="0 0 66 50" fill="none">
+							<g clip-path="url(#clip0_82_72)">
+							  <path d="M55.6828 4.25966C51.4093 2.30287 46.8979 0.914665 42.2637 0.130493C41.6295 1.26429 41.0557 2.43081 40.5447 3.62519C35.6084 2.88123 30.5885 2.88123 25.6522 3.62519C25.1409 2.43094 24.5671 1.26443 23.9332 0.130493C19.296 0.921287 14.7816 2.31279 10.5038 4.26989C2.01135 16.8365 -0.290832 29.0909 0.860258 41.1714C5.83367 44.8465 11.4003 47.6415 17.3183 49.4348C18.6508 47.6424 19.83 45.7408 20.8432 43.7502C18.9187 43.0313 17.0613 42.1444 15.2924 41.0998C15.7579 40.7621 16.2132 40.4141 16.6532 40.0764C21.8004 42.4974 27.4182 43.7526 33.1061 43.7526C38.794 43.7526 44.4119 42.4974 49.559 40.0764C50.0041 40.4397 50.4594 40.7876 50.9199 41.0998C49.1475 42.1461 47.2867 43.0347 45.3588 43.7553C46.3708 45.7449 47.55 47.645 48.8837 49.4348C54.8067 47.6487 60.3777 44.855 65.352 41.1765C66.7026 27.167 63.0447 15.0252 55.6828 4.25966ZM22.3012 33.742C19.0935 33.742 16.4435 30.8306 16.4435 27.2489C16.4435 23.6672 19.0014 20.7303 22.291 20.7303C25.5806 20.7303 28.2102 23.6672 28.1539 27.2489C28.0976 30.8306 25.5703 33.742 22.3012 33.742ZM43.911 33.742C40.6982 33.742 38.0584 30.8306 38.0584 27.2489C38.0584 23.6672 40.6163 20.7303 43.911 20.7303C47.2057 20.7303 49.8148 23.6672 49.7586 27.2489C49.7023 30.8306 47.1801 33.742 43.911 33.742Z" fill="white"/>
+							</g>
+							<defs>
+							  <clipPath id="clip0_82_72">
+								<rect width="65.0442" height="49.3043" fill="white" transform="translate(0.584045 0.130493)"/>
+							  </clipPath>
+							</defs>
+						  </svg> </div></a>
+					</div>
+				</div>
+
+
+				<div class="content-images" data-aos="fade-up" data-aos-duration="1200">
+					<svg class="star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M11.5939 0.449201L12.0783 7.69846L19.1224 9.47792L12.3776 12.1788L12.862 19.428L8.20913 13.848L1.46436 16.5488L5.33348 10.3993L0.680597 4.81923L7.72474 6.59869L11.5939 0.449201Z" fill="#FFC658"/>
+					  </svg>
+					  <svg class="star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M11.5939 0.449201L12.0783 7.69846L19.1224 9.47792L12.3776 12.1788L12.862 19.428L8.20913 13.848L1.46436 16.5488L5.33348 10.3993L0.680597 4.81923L7.72474 6.59869L11.5939 0.449201Z" fill="#FFC658"/>
+					  </svg>
+					  <svg class="star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M11.5939 0.449201L12.0783 7.69846L19.1224 9.47792L12.3776 12.1788L12.862 19.428L8.20913 13.848L1.46436 16.5488L5.33348 10.3993L0.680597 4.81923L7.72474 6.59869L11.5939 0.449201Z" fill="#FFC658"/>
+					  </svg>
+					  <svg class="star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M11.5939 0.449201L12.0783 7.69846L19.1224 9.47792L12.3776 12.1788L12.862 19.428L8.20913 13.848L1.46436 16.5488L5.33348 10.3993L0.680597 4.81923L7.72474 6.59869L11.5939 0.449201Z" fill="#FFC658"/>
+					  </svg>
+					  <svg class="star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M11.5939 0.449201L12.0783 7.69846L19.1224 9.47792L12.3776 12.1788L12.862 19.428L8.20913 13.848L1.46436 16.5488L5.33348 10.3993L0.680597 4.81923L7.72474 6.59869L11.5939 0.449201Z" fill="#FFC658"/>
+					  </svg>
+					  <svg class="star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M11.5939 0.449201L12.0783 7.69846L19.1224 9.47792L12.3776 12.1788L12.862 19.428L8.20913 13.848L1.46436 16.5488L5.33348 10.3993L0.680597 4.81923L7.72474 6.59869L11.5939 0.449201Z" fill="#FFC658"/>
+					  </svg>
+					  <svg class="star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M11.5939 0.449201L12.0783 7.69846L19.1224 9.47792L12.3776 12.1788L12.862 19.428L8.20913 13.848L1.46436 16.5488L5.33348 10.3993L0.680597 4.81923L7.72474 6.59869L11.5939 0.449201Z" fill="#FFC658"/>
+					  </svg>
+					  <svg class="star" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M11.5939 0.449201L12.0783 7.69846L19.1224 9.47792L12.3776 12.1788L12.862 19.428L8.20913 13.848L1.46436 16.5488L5.33348 10.3993L0.680597 4.81923L7.72474 6.59869L11.5939 0.449201Z" fill="#FFC658"/>
+					  </svg>
+					<Image class="astr animated-astr" src={astrImg} alt="astronaut"/>
+				</div>
+
+			</div>
+		</section>
+		
+		<!-- Projects -->
+		<Projects/>
+
+	</main>
+</Layout>
+
+<style>
+	.hero{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height:100vh;
+		background: linear-gradient(180deg, #8681DE 0%, rgba(176, 205, 236, 0.90) 100%);
+		overflow: hidden;
+	}
+
+	.container-hero{
+		position: relative;
+    	z-index: 1;
+		padding: 20px;
+		max-width: 650px;
+		margin: auto;
+	}
+
+	.title-hero {
+		text-align: center;
+		letter-spacing: 2.3px;
+		line-height: 50px;
+		margin-bottom: 12px;
+	}
+
+	.title-hero span{
+		font-size: 1.6em;
+		background: linear-gradient(to right,#6b53cd 20%,#3075dd 30%,#31529f 70%,#6d41c5 80%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-transform: uppercase;
+		background-size: 500% auto;
+    	animation: textShine 10s ease-in-out infinite alternate;
+	}
+
+	#particles-js{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+	.position{
+		color: rgba(3, 3, 3, 0.70);
+		text-align: center;
+		font-family: Roboto;
+		margin-top: 0;
+		font-size: 1em;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: 6.6px;
+		text-transform: uppercase;
+	}
+
+	.section-about{
+		background: #9A96E1;
+	}
+
+	.section-about .container{
+		padding: 40px 20px;
+		display: flex;
+		flex-direction: column-reverse;
+		overflow: hidden;
+	}
+
+	.section-about .container .content-images{
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 550px;
+    	margin: auto;
+	}
+
+	.section-about .container .astr{
+		width:90%;
+		height: 180px;
+		max-width: 325px;
+		object-fit: contain;
+		transform: rotate(-15deg);
+	}
+
+	.section-about .container h2{
+		text-align: center;
+		font-size: 2em;
+		text-transform: uppercase;
+		color:#1B1B1B;
+	}
+
+	.section-about .container h2 span{
+		background: linear-gradient(180deg, #4C51CC 0%, #4466BF 100%);
+    	padding: 2px 15px;
+    	color: white;
+	}
+
+	.section-about .container .content-about{
+		margin-top: 20px;
+		text-align: center;
+
+	
+	}
+
+	.section-about .container .content-about p{
+		color: #FFF;
+		font-size: 1em;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 145%; /* 23.2px */
+		letter-spacing: 0.32px;
+		text-transform: capitalize;
+	}
+
+	.point-adr{
+		display: none;
+		
+	}
+
+	.title-hero p{
+		margin: 0;
+		font-weight: 500;
+
+	}
+
+	.content-contact{
+		display: flex;
+		justify-content: center;
+    	flex-flow: wrap;
+    	gap: 15px;
+    	padding-top: 25px;
+		margin-top: 10px;
+		width: 100%;
+    	border-top: 3px solid #1b1b1b;
+	}
+
+	.content-contact img, .content-contact svg{
+		width: 26px;
+		height: 24px;
+	}
+
+	.content-contact a{
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2237cb8c;
+    padding: 0px;
+    border-radius: 10px;
+	transition: all 0.3s ease;
+	}
+
+	.content-contact a div{
+		display: flex;
+    justify-content: center;
+    align-items: center;
+		padding: 10px;
+	}
+
+	.content-contact a:hover{
+		transform: translateY(-5px);
+	}
+
+	.animated-astr{
+		animation: floating 10s infinite linear alternate-reverse;
+		z-index: 2;
+	}
+
+	@keyframes floating {
+		0%{
+			transform: translateY(-0px) rotate(-15deg);
+		}
+		50%{
+			transform: translateY(-33px) rotate(-15deg);
+		}
+
+		100%{
+			transform: translateY(10px) rotate(-15deg);
+		}
+	}
+
+	.content-images .star{
+		position: absolute;
+	}
+
+	.content-images .star:nth-child(1){
+		top: 20px;
+    	left: -60px;
+	}
+
+	.content-images .star:nth-child(2){
+		top: 140px;
+    	right: 222px;
+	}
+
+	.content-images .star:nth-child(3){
+		top: 132px;
+    	right: 59px;
+	}
+
+	.content-images .star:nth-child(4){
+		top: 0px;
+    	right: -40px;
+	}
+
+
+	.content-images .star:nth-child(5){
+		top: 172px;
+    	left: 236px;
+	}
+
+	.content-images .star:nth-child(6){
+		top: 199px;
+    	left: 171px;
+	}
+
+	.content-images .star:nth-child(7){
+		top: 52px;
+    	right: 186px;
+	}
+
+	.content-images .star:nth-child(8){
+		top: 119px;
+    left: 34px;
+	}
+
+	@keyframes stars1 {
+		0%{
+			transform: translateY(-0px) rotate(0deg);
+		}
+		50%{
+			transform: translateY(45px) rotate(-360deg);
+		}
+
+		100%{
+			transform: translateY(0px) rotate(0deg);
+		}
+	}
+
+	@keyframes stars2 {
+		0%{
+			transform: translateY(-0px) rotate(0deg);
+		}
+		50%{
+			transform: translateY(-45px) rotate(360deg);
+		}
+
+		100%{
+			transform: translateY(0px) rotate(0deg);
+		}
+	}
+
+	@keyframes blink {
+		0%{
+			opacity: 0.2;
+		}
+		50%{
+			opacity: 0.8;
+		}
+
+		100%{
+			opacity:0.2
+		}
+	}
+
+	.content-images .star:nth-child(1),
+	.content-images .star:nth-child(2),
+	.content-images .star:nth-child(3),
+	.content-images .star:nth-child(4){
+		animation: stars1 20s 3s infinite linear alternate-reverse;
+	}
+
+	.content-images .star:nth-child(5),
+	.content-images .star:nth-child(6),
+	.content-images .star:nth-child(7),
+	.content-images .star:nth-child(8){
+		animation: stars2 20s 0.9s infinite linear alternate-reverse;
+	}
+
+	.arrow-container{
+		margin: auto;
+		width: max-content;
+		display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+	border: none;
+	background: transparent;
+	outline: 0;
+	}
+
+	.arrow-container svg{
+		transform: rotate(90deg);
+		height: 65px;
+		width:65px;
+		font-weight: 300;
+		opacity: 0.7;
+		cursor: pointer;
+	}
+
+	.arrow-container svg:nth-child(2),
+	.arrow-container svg:nth-child(3){
+		margin-top: -35px;
+	}
+
+	.arrow-container svg:nth-child(1){
+		color: #6073d1;
+		fill:#6073d1;
+		animation: blink 3s 1s infinite linear;
+	}
+
+	.arrow-container svg:nth-child(2){
+		color:#8482f5;
+		fill:#8482f5;
+		animation: blink 3s 1.5s infinite linear;
+	}
+
+	.arrow-container svg:nth-child(3){
+		color: #8f74e3;
+		fill:#8f74e3;
+		animation: blink 3s 2s infinite linear;
+	}
+
+	@media(min-width:1024px){
+		.title-hero p{
+			font-size:1.8em ;
+			margin-bottom: 15px;
+		}
+
+		.title-hero span{
+			font-size: 2.15em;
+		}
+
+		.position{
+			margin-top: 20px;
+		}
+
+		.section-about{
+			padding: 60px 30px;
+		}
+
+		.section-about .container{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			max-width: 1440px;
+			align-items: center;
+			margin: auto;
+		}
+
+		.section-about .container h2{
+			text-align: left;
+			font-size: 3em;
+    		margin-bottom: 30px;
+		}
+
+		.section-about .content-about,
+		.section-about .content-images{
+			width: 50%;
+		}
+
+		.section-about .container .content-about p{
+			text-align: left;
+		}
+
+		.section-about .content-about{
+			max-width: 622px;
+		}
+
+		.section-about .container .astr{
+			height: 284px;
+		}
+
+		.content-contact{
+			justify-content: flex-start;
+		}
+
+		.section-about .container .content-images{
+			max-width: unset;
+		}
+		.content-images .star:nth-child(1){
+		top: -60px;
+    	left: 180px;
+	}
+
+		.content-images .star:nth-child(2){
+			top: -20px;
+			right: 155px;
+		}
+
+		.content-images .star:nth-child(3){
+			top: 250px;
+			right: 152px;
+		}
+
+		.content-images .star:nth-child(4){
+			top: 180px;
+			left: 155px;
+		}
+
+
+		.content-images .star:nth-child(5){
+			top: 90px;
+			left: 255px;
+		}
+
+		.content-images .star:nth-child(6){
+			top: 290px;
+			left: 305px;
+		}
+
+		.content-images .star:nth-child(7){
+			top: 90px;
+		right: 186px;
+		}
+
+		.content-images .star:nth-child(8){
+			top: -30px;
+		left: 349px;
+		}
+
+	}
+
+	
+
+</style>
+
+<script is:inline src="/particles.min.js"></script>
+
+<script is:inline>
+	particlesJS(
+		"particles-js",{
+  "particles": {
+    "number": {
+      "value": 78,
+      "density": {
+        "enable": true,
+        "value_area": 315.65905665290904
+      }
+    },
+    "color": {
+      "value": "#bdcde3"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 1,
+        "opacity_min": 0,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 4,
+        "size_min": 0.3,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 1,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 600
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": false,
+        "mode": "repulse"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 250,
+        "size": 0,
+        "duration": 2,
+        "opacity": 0,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 400,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+}
+	)
+</script>
+
+<script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script is:inline>
+    AOS.init();
+  </script>
