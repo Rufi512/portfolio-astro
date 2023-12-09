@@ -1,4 +1,4 @@
-# Portfolio Rafael Amaya
+# Portfolio Astro
 
 ## 🧞 Commands
 
