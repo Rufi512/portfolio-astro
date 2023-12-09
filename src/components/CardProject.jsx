@@ -1,6 +1,4 @@
 import { useState, useEffect } from "preact/hooks";
-
-import githubIcon from "../assets/icons/github-icon.png";
 import imagePr from "../assets/images/project.jpeg";
 
 const CardProject = ({
@@ -36,13 +34,12 @@ const CardProject = ({
   );
 };
 
-export const ProjectsList = () => {
+export const ProjectsList = ({token}) => {
 const [projects, setProjects] = useState([]);
 useEffect(() => {
     const request = async () => {
 
     try{
-        const token = "";
         let formattedData = [];
         const response = await fetch("https://api.github.com/graphql", {
             method: "POST",

@@ -1,14 +1,14 @@
 ---
 
 import {ProjectsList} from "../components/CardProject";
-
+const token = import.meta.env.TOKEN
 ---
 
 
 <section class="section-projects">
     <div class="container">
         <h2>PROJECTS</h2>
-        <ProjectsList client:load/>
+        <ProjectsList token={token} client:load/>
        
     </div>
 </section>
