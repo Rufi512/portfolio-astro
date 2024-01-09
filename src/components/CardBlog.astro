@@ -1,0 +1,31 @@
+---
+interface Props {
+	title: string;
+	image: string;
+	description: string;
+    tag:string;
+    colorTag:string;
+    readTime:string;
+    url:string;
+    date:string;
+}
+
+const { title, image, description, tag, colorTag, readTime, url, date } = Astro.props;
+---
+
+<article class="flex flex-col  mt-0 max-w-[525px] bg-[#f8f8ff] group overflow-hidden rounded-lg ">
+    <a href=`${url}` class="relative contents">
+        <div class="h-[230px] overflow-hidden">
+            <img transition:name=`${title} image` src={image} alt="image" class="group-hover:scale-110 h-full transition-all duration-[.450s] ease-in-out object-cover w-full" />
+        </div>
+        <div class="p-5 flex flex-col gap-3">
+            <div class="flex items-center justify-start gap-2 flex-wrap">
+                <span  class={`bg-[${colorTag}] text-white transition-all font-bold px-4 py-1 rounded-full w-fit text-md`}>{tag}</span>
+                <span  class="flex items-center justify-center text-md font-semibold text-[#061737]">{readTime}</span>
+            </div>
+            <h2 class="text-2xl font-semibold">{title}</h2>
+            <p class="overflow-ellipsis overflow-hidden line-clamp-3">{description}</p>
+            <div class="flex flex-row justify-start gap-3 items-center "><svg xmlns="http://www.w3.org/2000/svg" height="26" width="18" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg> <strong class="text-[#1e1e1e] mt-1">{date} </strong> </div>
+        </div>
+    </a>
+</article>

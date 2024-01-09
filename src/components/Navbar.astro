@@ -1,0 +1,19 @@
+---
+const url = Astro.url;
+const currentPath = url.pathname.split('/')[1]; // remove the first "/"
+console.log(currentPath)
+
+---
+
+<header class="bg-transparent w-full p-3 z-40 fixed top-0">
+    <div class="w-full flex items-center justify-center h-full">
+        <div class="m-auto justify-center items-center">
+            <nav class="relative flex items-center justify-between">
+                <ul class="flex items-center justify-between gap-3 text-lg text-white">
+                    <li class={`${ currentPath == '' ? 'bg-[#3160b8]' : 'bg-[#3160b88c]'} hover:bg-[#3160b8] transition-all font-bold rounded-full`}><a class="px-5 py-1 block" href="/">Home</a></li>
+                    <li class={`${ currentPath == 'blog' ? 'bg-[#3160b8]' : 'bg-[#3160b88c]'} hover:bg-[#3160b8] transition-all font-bold rounded-full`}><a class="px-5 py-1 block" href="/blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

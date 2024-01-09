@@ -9,15 +9,14 @@ import fiverrIcon from '../assets/icons/fiverr-icon.png'
 ---
 
 <Layout 
-title="Portfolio Rafael Amaya"
+title="Rufi - Rafael Amaya"
 description="Web developer passionate about both client-side and server-side programming. I'm always eager to explore new technologies and stay on top of the latest trends, the passion for web development and improving myself drives me to learn and grow every day!"
 >
-	<main>
 		<section class="hero">
-			<div id="particles-js"></div>
+			<div id="particles-js" class="w-full h-full absolute inset-x-0 inset-y-0"></div>
 			<Image class="point-adr point-adr-left" src={points} alt="point-adr point-adr-left"/>
-			<div class="container-hero">
-				<h1 class="title-hero"><p>HI! 👋 I AM</p> <span>Rafael Amaya</span></h1>
+			<div class="container-hero items-center justify-center">
+				<h1 class="title-hero font-bold"><p>HI! 👋 I AM</p> <span>Rafael Amaya</span></h1>
 				<h2 class="position">Web developer</h2>
 			</div>
 			<Image class="point-adr point-adr-right" src={points} alt="point-adr point-adr-right"/>
@@ -31,8 +30,10 @@ description="Web developer passionate about both client-side and server-side pro
 		<section class="section-about">
 			<div class="container">
 				<div class="content-about">
-					<h2>About <span>RAFAEL</span></h2>
-					<p>Web developer passionate about both client-side and server-side programming. My favorite language is javascript. However, I'm not satisfied with that, I'm always eager to explore new technologies and stay on top of the latest trends, the passion for web development and improving myself drives me to learn and grow every day!</p>
+					<h2 class="font-bold mb-0">About <span>RAFAEL</span></h2>
+					<small class="text-center mt-4 lg:text-left lg:mt-0 text-[#1B1B1B] w-full block">Also known as <span class="font-bold">Rufi</span></small>
+
+					<p class="mt-6">Web developer passionate about both client-side and server-side programming. My favorite language is javascript. However, I'm not satisfied with that, I'm always eager to explore new technologies and stay on top of the latest trends, the passion for web development and improving myself drives me to learn and grow every day!</p>
 					<div class="content-contact">
 						<a href="mailto:Rafajos9@gmail.com"><div class="tooltip" title="Rafajos9@gmail.com" data-tooltip-placement="top" data-tooltip-interactive="true"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
 							<g clip-path="url(#clip0_76_16)">
@@ -118,7 +119,7 @@ description="Web developer passionate about both client-side and server-side pro
 		<!-- Projects -->
 		<Projects/>
 
-	</main>
+	</>
 </Layout>
 
 <style>
@@ -142,9 +143,16 @@ description="Web developer passionate about both client-side and server-side pro
 
 	.title-hero {
 		text-align: center;
-		letter-spacing: 2.3px;
 		line-height: 50px;
 		margin-bottom: 12px;
+		font-size: 1.6em;
+		letter-spacing: 9px;
+	}
+
+	.title-hero p{
+		letter-spacing: 1px;
+		color: #1e1c1c;
+		font-weight: 600;
 	}
 
 	.title-hero span{
@@ -155,16 +163,6 @@ description="Web developer passionate about both client-side and server-side pro
 		text-transform: uppercase;
 		background-size: 500% auto;
     	animation: textShine 10s ease-in-out infinite alternate;
-	}
-
-	#particles-js{
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
 	}
 
 	@keyframes textShine {
@@ -228,10 +226,11 @@ description="Web developer passionate about both client-side and server-side pro
 		background: linear-gradient(180deg, #4C51CC 0%, #4466BF 100%);
     	padding: 2px 15px;
     	color: white;
+		border-radius: 10px;
 	}
 
 	.section-about .container .content-about{
-		margin-top: 20px;
+		margin-top: 45px;
 		text-align: center;
 
 	
@@ -489,7 +488,6 @@ description="Web developer passionate about both client-side and server-side pro
 		.section-about .container h2{
 			text-align: left;
 			font-size: 3em;
-    		margin-bottom: 30px;
 		}
 
 		.section-about .content-about,

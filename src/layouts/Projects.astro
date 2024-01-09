@@ -2,12 +2,13 @@
 
 import {ProjectsList} from "../components/CardProject";
 const token = import.meta.env.TOKEN
+
 ---
 
 
 <section class="section-projects">
-    <div class="container">
-        <h2>PROJECTS</h2>
+    <div class="container m-auto">
+        <h2 class="font-bold mb-5">PROJECTS</h2>
         <ProjectsList token={token} client:load/>
        
     </div>
@@ -133,9 +134,15 @@ flex-grow: 2;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(7, 23, 38, 0.28) 93.23%);
     }
 
+    .flicking-viewport{
+        overflow: hidden;
+        width: 100%;
+        padding-right: 40px;
+        height:60px !important;
+    }
+    
     .languages{
         display: flex;
-        flex-flow: wrap;
         gap: 10px;
         margin-top: 10px;
     }
@@ -147,8 +154,13 @@ flex-grow: 2;
     font-size: 0.9em;
     font-weight: 700;
     color: #ffffff;
-    padding: 7px 15px;
+    display: flex;
+    padding: 0px 15px;
+    height: 40px;
+    align-items: center;
+
     }
+
 
     .link{
         flex-grow: 1;

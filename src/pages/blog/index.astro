@@ -1,0 +1,65 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import pinImage from "../../assets/icons/pin.png"
+import CardBlog from "../../components/CardBlog.astro";
+import kannaIcon from "../../assets/icons/kanna.png"
+import { Image } from "astro:assets";
+const allPosts = await Astro.glob('./*.md')
+const pinnedPost = allPosts.filter((post)=> post.frontmatter.pinned == "true" ?? post)[0]
+console.log(pinnedPost)
+---
+
+<Layout 
+title="Blog - Rufi512"
+description="Check out funny data and awesome tips xdxd"
+>
+
+
+    <div class="flex flex-col items-center justify-center h-36 p-8 mt-32 lg:mt-24 gap-2 mb-4">
+        <h1 class="text-4xl font-bold uppercase text-[#1b1b1b] text-center">Blog</h1>
+        <p class="text-xl mt-2 text-[#1b1b1b] text-center">Aqui subire cositas o temas que comentar xd</p>
+        <Image src={kannaIcon} alt="kanna icon"/>
+    </div>
+
+<section class="flex flex-col items-center justify-center w-full p-5">
+    {pinnedPost ? (
+    <article class="flex flex-col lg:flex-row lg:items-center bg-[#f8f8ff] group overflow-hidden max-w-[525px] lg:max-w-[1250px] rounded-lg">
+        <a class="contents" href={pinnedPost.url}>
+            <div class="h-[230px] lg:h-[380px] overflow-hidden">
+                    <img transition:name={`${pinnedPost.frontmatter.title} image`} src={pinnedPost.frontmatter.image.src} alt="image" class="group-hover:scale-110 h-full transition-all duration-[.450s] ease-in-out object-cover w-full" />
+            </div>
+            
+            <div class="flex flex-col p-5  gap-3 mt-0 lg:flex-shrink-[4] min-[1050px]:lg:flex-shrink-[5]">
+                <div class="flex items-center justify-start gap-2 flex-wrap">
+                    <span class={`bg-[${pinnedPost.frontmatter.colorTag}] text-white transition-all font-bold px-4 py-1 rounded-full w-fit text-md`}>{pinnedPost.frontmatter.tag}</span>
+                    <div class="flex justify-center items-center gap-2">
+                        <span  class="flex items-center justify-center text-md font-semibold text-[#061737]"> {pinnedPost.frontmatter.readTime}</span>
+                        <img class="h-[24px]" alt="pinned" src={pinImage.src}/>
+                    </div>
+                </div>
+                <h2 class="text-2xl font-semibold">{pinnedPost.frontmatter.title}</h2>
+                <p class="overflow-ellipsis overflow-hidden line-clamp-5">{pinnedPost.frontmatter.description}</p>
+                <div class="flex flex-row justify-start gap-3 items-center "><svg xmlns="http://www.w3.org/2000/svg" height="26" width="18" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7 0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48 192H400V448c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192z"/></svg> <strong class="text-[#1e1e1e] mt-1">{pinnedPost.frontmatter.date} </strong> </div>
+            </div>
+        </a>
+    </article>
+    ) : ''
+}
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 items-start justify-start gap-5 mt-3 lg:max-w-[1250px]">
+        {allPosts.map((el:any)=>{
+            if(el.frontmatter.pinned) return 
+
+            return <CardBlog title={el.frontmatter.title} description={el.frontmatter.description} readTime={el.frontmatter.readTime} colorTag={el.frontmatter.colorTag} tag={el.frontmatter.tag} date={el.frontmatter.date} image={el.frontmatter.image.src} url={el.url}/>
+        })}
+    </div>
+</section>
+
+</Layout>
+
+<style is:inline>
+    body{
+        background: linear-gradient(180deg,#8681DE 0%,rgba(176,205,236,0.90) 100%);
+    }
+    
+</style>
