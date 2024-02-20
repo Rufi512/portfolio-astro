@@ -16,7 +16,8 @@ description="Web developer passionate about both client-side and server-side pro
 			<div id="particles-js" class="w-full h-full absolute inset-x-0 inset-y-0"></div>
 			<Image class="point-adr point-adr-left" src={points} alt="point-adr point-adr-left"/>
 			<div class="container-hero items-center justify-center">
-				<h1 class="title-hero font-bold"><p>HI! 👋 I AM</p> <span>Rafael Amaya</span></h1>
+				<p>HI! 👋 I AM</p> 
+				<h1 class="title-hero font-bold"><span>Rafael Amaya</span></h1>
 				<h2 class="position">Web developer</h2>
 			</div>
 			<Image class="point-adr point-adr-right" src={points} alt="point-adr point-adr-right"/>
@@ -143,10 +144,10 @@ description="Web developer passionate about both client-side and server-side pro
 
 	.title-hero {
 		text-align: center;
-		line-height: 50px;
+		line-height: 40px;
 		margin-bottom: 12px;
-		font-size: 1.6em;
-		letter-spacing: 9px;
+		font-size: 1.4em;
+		letter-spacing: 5px;
 	}
 
 	.title-hero p{
@@ -156,7 +157,7 @@ description="Web developer passionate about both client-side and server-side pro
 	}
 
 	.title-hero span{
-		font-size: 1.6em;
+		font-size: 1.4em;
 		background: linear-gradient(to right,#6b53cd 20%,#3075dd 30%,#31529f 70%,#6d41c5 80%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -250,10 +251,13 @@ description="Web developer passionate about both client-side and server-side pro
 		
 	}
 
-	.title-hero p{
+	.container-hero p{
 		margin: 0;
+		font-size: 1.3em;
+		margin-bottom: 17px;
+		color: #101f4b;
 		font-weight: 500;
-
+		text-align: center;
 	}
 
 	.content-contact{
@@ -274,18 +278,18 @@ description="Web developer passionate about both client-side and server-side pro
 
 	.content-contact a{
 		display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #2237cb8c;
-    padding: 0px;
-    border-radius: 10px;
-	transition: all 0.3s ease;
+		justify-content: center;
+		align-items: center;
+		background: #2237cb8c;
+		padding: 0px;
+		border-radius: 10px;
+		transition: all 0.3s ease;
 	}
 
 	.content-contact a div{
 		display: flex;
-    justify-content: center;
-    align-items: center;
+		justify-content: center;
+		align-items: center;
 		padding: 10px;
 	}
 
@@ -353,7 +357,7 @@ description="Web developer passionate about both client-side and server-side pro
 
 	.content-images .star:nth-child(8){
 		top: 119px;
-    left: 34px;
+    	left: 34px;
 	}
 
 	@keyframes stars1 {
@@ -413,23 +417,23 @@ description="Web developer passionate about both client-side and server-side pro
 		margin: auto;
 		width: max-content;
 		display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    z-index: 0;
-	border: none;
-	background: transparent;
-	outline: 0;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		right: 0;
+		z-index: 0;
+		border: none;
+		background: transparent;
+		outline: 0;
 	}
 
 	.arrow-container svg{
 		transform: rotate(90deg);
-		height: 65px;
-		width:65px;
+		height: 35px;
+		width:35px;
 		font-weight: 300;
 		opacity: 0.7;
 		cursor: pointer;
@@ -437,7 +441,7 @@ description="Web developer passionate about both client-side and server-side pro
 
 	.arrow-container svg:nth-child(2),
 	.arrow-container svg:nth-child(3){
-		margin-top: -35px;
+		margin-top: -15px;
 	}
 
 	.arrow-container svg:nth-child(1){
@@ -459,6 +463,19 @@ description="Web developer passionate about both client-side and server-side pro
 	}
 
 	@media(min-width:1024px){
+		.arrow-container svg{
+			height:50px;
+			width:50px;
+		}
+
+		.arrow-container svg:nth-child(2),
+		.arrow-container svg:nth-child(3){
+			margin-top: -20px;
+		}
+
+		.container-hero p{
+			font-size:1.6em;
+		}
 		.title-hero p{
 			font-size:1.8em ;
 			margin-bottom: 15px;
@@ -466,6 +483,7 @@ description="Web developer passionate about both client-side and server-side pro
 
 		.title-hero span{
 			font-size: 2.15em;
+			letter-spacing: 5px;
 		}
 
 		.position{
@@ -515,9 +533,9 @@ description="Web developer passionate about both client-side and server-side pro
 			max-width: unset;
 		}
 		.content-images .star:nth-child(1){
-		top: -60px;
-    	left: 180px;
-	}
+			top: -60px;
+			left: 180px;
+		}
 
 		.content-images .star:nth-child(2){
 			top: -20px;
